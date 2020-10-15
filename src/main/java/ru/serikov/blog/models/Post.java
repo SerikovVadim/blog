@@ -12,8 +12,18 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title, anons, fullText;
+    private String title, anons, full_Text;
     private int views;
+
+    public Post(){
+
+    }
+
+    public Post(String title, String anons, String full_Text) {
+        this.title = title;
+        this.anons = anons;
+        this.full_Text = full_Text;
+    }
 
     public Long getId() {
         return id;
@@ -39,12 +49,12 @@ public class Post {
         this.anons = anons;
     }
 
-    public String getFullText() {
-        return fullText;
+    public String getFull_Text() {
+        return full_Text;
     }
 
-    public void setFullText(String fullText) {
-        this.fullText = fullText;
+    public void setFull_Text(String fullText) {
+        this.full_Text = fullText;
     }
 
     public int getViews() {

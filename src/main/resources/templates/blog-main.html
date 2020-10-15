@@ -13,8 +13,8 @@
     <h1>Блог сайта</h1>
     <div th:each="elment : ${posts}" class="alert alert-info mt-2">
         <h3 th:text="${elment.title}"></h3>
-        <p th:text="${elment.anons}"></p>
-        <a th:href="'/blog' + ${elment.id}">Подробнее</a>
+        <p><b>Просмотры:</b> <span th:text="${elment.views}" ></span> </p>
+        <a th:href="'/blog/' + ${elment.id}" class="btn btn-warning">Детальнее</a>
     </div>
 </div>
 
